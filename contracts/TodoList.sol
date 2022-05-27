@@ -1,4 +1,5 @@
-pragma solidity ^0.5.0;
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.4.22 <0.9.0;
 
 contract TodoList {
   uint public taskCount = 0;
@@ -9,11 +10,15 @@ contract TodoList {
     bool completed;
   }
 
+  constructor() public{
+    createTask('Example Task Intialized');
+  }
+
   mapping(uint => Task) public tasks;
 
   event TaskCreated(
     uint id,
-    string content,
+    string content, 
     bool completed
   );
 
@@ -22,12 +27,8 @@ contract TodoList {
     bool completed
   );
 
-  constructor() public {
-    createTask("Check out dappuniversity.com");
-  }
-
   function createTask(string memory _content) public {
-    taskCount ++;
+    taskCount++;
     tasks[taskCount] = Task(taskCount, _content, false);
     emit TaskCreated(taskCount, _content, false);
   }
@@ -38,5 +39,4 @@ contract TodoList {
     tasks[_id] = _task;
     emit TaskCompleted(_id, _task.completed);
   }
-
 }
