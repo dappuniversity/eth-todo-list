@@ -19,7 +19,11 @@
     "chai-bignumber": "^2.0.2",
     "lite-server": "^2.3.0",
     "nodemon": "^1.17.3",
-    "truffle": "5.0.2",
-    "truffle-contract": "3.0.6"
+    "truffle": "^5.4.9",
+    "@truffle/contract": "4.3.33",
+    "web3": "1.5.2"
+  },
+  "dependencies": {
+    "web3": "^1.7.0"
   }
 }
