@@ -1,0 +1,22 @@
+ A decentralized application (DApp) for managing a to-do list. The DApp is built on the Ethereum blockchain using Solidity smart contracts and a web-based user interface.
+
+Project Structure
+The project consists of the following key components:
+
+Smart Contracts:
+
+Migrations.sol: A basic contract used for managing migrations.
+TodoList.sol: The main contract for managing tasks on the to-do list.
+Truffle Migration Scripts:
+
+1_initial_migration.js: Deploys the Migrations contract.
+2_deploy_contract.js: Deploys the TodoList contract.
+Front-End Web Application:
+
+app.js: JavaScript code for the web interface of the DApp.
+index.html: The HTML template for the DApp's user interface.
+Test Scripts:
+
+TodoList.test.js: Tests for the TodoList contract to ensure its functionality.
+This DApp was created as part of a tutorial by Dapp University.
+This project is open-source and available under the MIT License.
